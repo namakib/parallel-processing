@@ -1,0 +1,300 @@
+* {
+	box-sizing: border-box;
+}
+
+@page {
+	margin: 0.7in; /* Example: 1 inch margins for printing/PDF */
+  }
+
+html {
+	font-size: 100%;
+}
+
+body {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+		'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+	line-height: 1.6;
+	font-size: 0.6875em; /* 11 pt */
+	color: #111;
+	margin: 0;
+}
+
+body > :first-child {
+	padding-top: 0;
+	margin-top: 0;
+}
+
+body > :last-child {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: 0.5em 0 0.25em;
+}
+
+h5,
+h6 {
+	padding: 0;
+}
+
+h5 {
+	font-size: 1em;
+}
+
+h6 {
+	font-size: 0.875em;
+	text-transform: uppercase;
+}
+
+p {
+	margin: 0.25em 0 1em;
+}
+
+blockquote {
+	margin: 0.5em 0 1em;
+	padding-left: 0.5em;
+	padding-right: 1em;
+	border-left: 4px solid gainsboro;
+	font-style: italic;
+}
+
+ul,
+ol {
+	margin: 0;
+	margin-left: 1em;
+	padding: 0 1.5em 0.5em;
+}
+
+pre {
+	white-space: pre-wrap;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code,
+p code,
+li code,
+pre code {
+	background-color: #f8f8f8;
+	padding: 0.1em 0.375em;
+	border: 1px solid #f8f8f8;
+	border-radius: 0.25em;
+	font-family: monospace;
+	font-size: 1.2em;
+}
+
+pre code {
+	display: block;
+	padding: 0.5em;
+}
+
+.page-break {
+	page-break-after: always;
+}
+
+img {
+	max-width: 100%;
+	margin: 1em 0;
+}
+
+table {
+	border-spacing: 0;
+	border-collapse: collapse;
+	display: block;
+	margin: 0 0 1em;
+	width: 100%;
+	overflow: auto;
+}
+
+table th,
+table td {
+	padding: 0.5em 1em;
+	border: 1px solid gainsboro;
+}
+
+table th {
+	font-weight: 600;
+}
+
+table tr {
+	background-color: white;
+	border-top: 1px solid gainsboro;
+}
+
+table tr:nth-child(2n) {
+	background-color: whitesmoke;
+}
+
+/* Finance Result Card */
+.result-card {
+	border: 1px solid #e5e7eb;
+	border-radius: 14px;
+	padding: 14px 16px;
+	margin: 12px 0 16px;
+	box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+  }
+  
+  .result-card > header {
+	font-weight: 700;
+	margin-bottom: 10px;
+	padding-bottom: 8px;
+	border-bottom: 1px solid #eee;
+	font-size: 1.08em;
+  }
+  
+  .result-card .kv {
+	display: grid;
+	grid-template-columns: 1fr max-content;
+	gap: 8px 16px;
+	align-items: center;
+	font-size: 1.02em;
+  }
+  
+  .result-card .kv .k-muted {
+	color: #6b7280;
+  }
+  
+  .result-card .kv .v {
+	text-align: right;
+	white-space: nowrap;
+	font-variant-numeric: tabular-nums;
+  }
+  
+  .result-card .pill {
+	background: #f6f7f9;
+	border-radius: 10px;
+	padding: 6px 10px;
+	font-weight: 700;
+  }
+  
+  .result-card .pill-strong {
+	background: #eef6ff;
+	border-radius: 10px;
+	padding: 6px 10px;
+	font-weight: 800;
+  }
+
+  /* --- print-safe rows --- */
+.index-row {
+	break-inside: avoid;
+	page-break-inside: avoid;
+	-webkit-column-break-inside: avoid;
+  }
+  
+  /* keep header with the next row when possible */
+  .index-header {
+	break-after: avoid;
+	page-break-after: avoid;
+  }
+  
+  /* allow the outer card to span pages */
+  .index-card { overflow: visible; }
+  
+  /* optional: force a manual break if needed */
+  .page-break { page-break-after: always; }
+  
+  /* tiny improvement for numeric alignment */
+  .index-num, .index-page { font-variant-numeric: tabular-nums; }
+  
+  .index-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 16px 18px;
+    margin: 12px 0 18px;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+  }
+  .index-title {
+    font-weight: 700;
+    font-size: 1.12em;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+  }
+
+  /* ---------- SCREEN: Grid/Card UI ---------- */
+  .index-grid .index-header {
+    display: grid;
+    grid-template-columns: 70px 220px 1fr 100px;
+    gap: 8px 14px;
+    align-items: center;
+    font-weight: 700;
+    background: #f7f7f8;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 10px 12px;
+  }
+  .index-rows {
+    margin-top: 8px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .index-row {
+    display: grid;
+    grid-template-columns: 70px 220px 1fr 100px;
+    gap: 8px 14px;
+    align-items: center;
+    padding: 10px 12px;
+  }
+  .index-row:nth-child(even) { background: #fafafa; }
+  .index-num  { font-variant-numeric: tabular-nums; }
+  .index-page { text-align: right; font-variant-numeric: tabular-nums; }
+
+  /* ---------- PRINT: clean container + table ---------- */
+  .index-print { display: none; }
+
+  .index-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.97em;
+    border: 1px solid #e5e7eb;       /* own border so it “closes” on each page */
+  }
+  .index-table th,
+  .index-table td {
+    border: 1px solid #e5e7eb;
+    padding: 8px 10px;
+    vertical-align: top;
+  }
+  .index-table thead th {
+    background: #f7f7f8;
+    font-weight: 700;
+  }
+  .index-table tbody tr:nth-child(even) td { background: #fafafa; }
+  .index-table .num   { width: 70px; }
+  .index-table .title { width: 220px; }
+  .index-table .page  { width: 100px; text-align: right; }
+
+  /* ---------- Page-break hygiene ---------- */
+  .index-row,
+  .index-table tr     { break-inside: avoid; page-break-inside: avoid; }
+  .index-table        { page-break-inside: auto; }
+
+  /* ---------- Print rules ---------- */
+  @media print {
+    /* Repeat header, allow normal grouping */
+    thead { display: table-header-group; }
+    tbody { display: table-row-group; }
+    tfoot { display: table-footer-group; }
+
+    /* Hide screen card; show print table */
+    .index-card { display: none !important; }
+    .index-print { display: block !important; }
+
+    /* Remove rounded effects (they look “open” across page break) */
+    .index-table,
+    .index-table th,
+    .index-table td { border-radius: 0 !important; }
+
+    /* No page overflow clipping */
+    * { overflow: visible !important; }
+  }

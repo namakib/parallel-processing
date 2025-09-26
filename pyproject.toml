@@ -1,0 +1,72 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "parallel-processing-assignments"
+description = "Assignments exploring different approaches to parallelizing 2D heat diffusion solver"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=1.21.0",
+    "matplotlib>=3.5.0",
+    "numba>=0.56.0"
+]
+
+[tool.basedpyright]
+include = [
+    "Assignment1",
+    "Assignment2", 
+    "Assignment3"
+]
+exclude = [
+    "venv",
+    "**/node_modules",
+    "**/__pycache__",
+    "**/.*"
+]
+venvPath = "."
+venv = "venv"
+pythonVersion = "3.9"
+pythonPlatform = "Darwin"
+
+# Import and module resolution
+reportMissingImports = "warning"
+reportMissingTypeStubs = "none"
+reportImportCycles = "warning"
+reportUnusedImport = "warning"
+reportDuplicateImport = "warning"
+reportWildcardImportFromLibrary = "warning"
+
+# Type checking strictness (relaxed for scientific computing)
+reportOptionalSubscript = "none"
+reportOptionalMemberAccess = "none" 
+reportOptionalCall = "none"
+reportOptionalIterable = "none"
+reportOptionalContextManager = "none"
+reportOptionalOperand = "none"
+reportGeneralTypeIssues = "warning"
+
+# Function and class annotations (relaxed for assignments)
+reportUntypedFunctionDecorator = "none"
+reportUntypedClassDecorator = "none"
+reportUntypedBaseClass = "none"
+reportUntypedNamedTuple = "none"
+reportMissingParameterType = "none"
+reportUnknownParameterType = "none"
+reportUnknownArgumentType = "none"
+reportUnknownVariableType = "none"
+reportUnknownMemberType = "none"
+
+# Code quality
+reportUnusedVariable = "none"
+reportConstantRedefinition = "warning"
+reportPrivateUsage = "none"
+reportIncompatibleMethodOverride = "warning"
+reportIncompatibleVariableOverride = "warning"
+
+# Performance and best practices
+reportUnnecessaryIsInstance = "none"
+reportUnnecessaryCast = "none"
+reportUnnecessaryComparison = "none"
+reportUnnecessaryContains = "none"

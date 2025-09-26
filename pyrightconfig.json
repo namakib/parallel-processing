@@ -1,0 +1,36 @@
+{
+  "include": [
+    "Assignment1",
+    "Assignment2", 
+    "Assignment3"
+  ],
+  "exclude": [
+    "venv",
+    "**/node_modules",
+    "**/__pycache__",
+    "**/.*"
+  ],
+  "venvPath": ".",
+  "venv": "venv",
+  "pythonVersion": "3.9",
+  "pythonPlatform": "Darwin",
+  "reportMissingImports": "warning",
+  "reportMissingTypeStubs": "none",
+  "reportUnusedImport": "warning",
+  "reportUnusedVariable": "none",
+  "reportDuplicateImport": "warning",
+  "reportWildcardImportFromLibrary": "warning",
+  "reportOptionalSubscript": "none",
+  "reportOptionalMemberAccess": "none",
+  "reportOptionalCall": "none",
+  "reportOptionalIterable": "none",
+  "reportOptionalContextManager": "none",
+  "reportOptionalOperand": "none",
+  "reportGeneralTypeIssues": "warning",
+  "reportUntypedFunctionDecorator": "none",
+  "reportUntypedClassDecorator": "none",
+  "reportUntypedBaseClass": "none",
+  "reportUntypedNamedTuple": "none",
+  "reportPrivateUsage": "none",
+  "reportConstantRedefinition": "warning"
+}
