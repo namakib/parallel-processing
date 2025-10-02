@@ -16,10 +16,6 @@
 - **Cache Optimization**: Tile-based processing with configurable tile sizes (default: 32x32)
 - **Memory Layout**: All arrays guaranteed C-contiguous with `order='C'`
 
-## Performance Results
-
-**Visual Analysis**: See `convergence_analysis.png` and `optimization_impact.png`
-
 ## Visual Analysis
 
 ### Runtime vs Grid Size and Iterations to Convergence
@@ -31,13 +27,19 @@
 ### Results Table
 | N | Solver Type | Iterations | Runtime (sec) | Convergence | Speedup |
 | --- | --- | --- | --- | --- | --- |
-| 256 | Convergence Basic | 1000 | 0.147 | ✓ | 0.47x |
-| 256 | Convergence Tiled | 1000 | 0.175 | ✓ | 0.40x |
+| 256 | Convergence Basic | 1000 | 0.119 | ✓ | 0.47x |
+| 256 | Convergence Tiled | 1000 | 0.132 | ✓ | 0.42x |
+| 512 | Convergence Basic | 1000 | 0.145 | ✓ | 0.49x |
+| 512 | Convergence Tiled | 1000 | 0.191 | ✓ | 0.37x |
+| 1024 | Convergence Basic | 1000 | 0.223 | ✓ | 0.46x |
+| 1024 | Convergence Tiled | 1000 | 0.447 | ✓ | 0.23x |
 
 ## Analysis
 
 ### Convergence Detection Impact:
 - **N=256**: 1000/500 iterations (-100.0% fewer) → 0.47x speedup
+- **N=512**: 1000/500 iterations (-100.0% fewer) → 0.49x speedup
+- **N=1024**: 1000/500 iterations (-100.0% fewer) → 0.46x speedup
 
 ### Cache Tiling Benefits:
 
